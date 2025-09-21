@@ -387,9 +387,13 @@ elif escolha == "Clustering":
     Nossa clusterização foi baseada em 5 features principais, cada uma revelando um aspecto da jornada do cliente, sendo elas:
         
     Tempo de cliente: Contagem do tempo em meses;
+    
     Contratos: Quantidade de contratos no total e ativos;
+    
     Marcas TOTVS: Marca TOTVS que o cliente consome;
+    
     Segmento do Cliente: O segmento que o cliente pertence;
+    
     Hospedagem do Cliente: Hospedagem que o cliente utiliza.
 
     A combinação dessas features nos permitiu entender não só o comportamento de compra, mas também o nível de engajamento de cada cliente.
@@ -455,6 +459,7 @@ elif escolha == "Clustering":
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             help="Baixe os dados numéricos da clusterização por jornada."
         )
+
 
 
 
