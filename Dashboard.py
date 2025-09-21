@@ -59,7 +59,7 @@ st.markdown(
 st.sidebar.image("logonyxter.png", width=150)
 st.sidebar.markdown("---") 
 # Opções de menu na sidebar
-opcoes = ["Página Inicial", "Visão Geral", "Jornada do Cliente", "Análise RFM", "Clustering", "NyxterIA"] 
+opcoes = ["Página Inicial", "Visão Geral", "Jornada do Cliente", "Análise RFM", "Clustering"] 
 escolha = st.sidebar.radio("**Escolha o tema:**", opcoes)
 
 # ---- Conteúdo Principal ----
@@ -456,10 +456,5 @@ elif escolha == "Clustering":
             help="Baixe os dados numéricos da clusterização por jornada."
         )
 
-elif escolha == "NyxterIA":
-    st.title("Análise RFM (Recência, Frequência e Valor Monetário)")
-    st.markdown("""
-        Aqui você verá a segmentação dos clientes da TOTVS com base em seu comportamento de compra.
-        Esta página será usada para visualizar clusters como "Cliente Campeão", "Leal" e "Em Risco".
-    """)
+
 
