@@ -1,7 +1,6 @@
 import streamlit as st 
 import requests 
 import pandas as pd 
-import plotly.express as px
 import io
 
 # Configuração da página
@@ -463,3 +462,4 @@ elif escolha == "NyxterIA":
         Aqui você verá a segmentação dos clientes da TOTVS com base em seu comportamento de compra.
         Esta página será usada para visualizar clusters como "Cliente Campeão", "Leal" e "Em Risco".
     """)
+
