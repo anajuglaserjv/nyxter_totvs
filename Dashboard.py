@@ -411,54 +411,6 @@ elif escolha == "Clustering":
     st.markdown("---")
 
 
-    # Certifique-se de que o arquivo "dados_cluster.xlsx" está no mesmo diretório do seu script
-    try:
-        df_rfm = pd.read_excel("Dados_Clusters_RFM.xlsx")
-        df_jornada = pd.read_excel("Dados_Cluster_Jornada_do_Cliente (1).xlsx")
-    except FileNotFoundError:
-        st.error("Erro: Arquivos Excel não encontrados! Certifique-se de que 'Dados_Clusters_RFM.xlsx' e 'Dados_Cluster_Jornada_do_Cliente (1).xlsx' estão no mesmo diretório do script.")
-        st.stop()
-
-
-    st.header("Faça o download dos dados")
-    st.markdown("""
-        Você pode fazer o download dos dados dos clientes após a clusterização.
-    """)
-
-    # Funções para converter DataFrames em bytes
-    @st.cache_data
-    def convert_df_to_excel_bytes(df):
-        output = io.BytesIO()
-        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
-            df.to_excel(writer, index=False, sheet_name='Sheet1')
-        processed_data = output.getvalue()
-        return processed_data
-
-    excel_bytes_rfm = convert_df_to_excel_bytes(df_rfm)
-    excel_bytes_jornada = convert_df_to_excel_bytes(df_jornada)
-
-
-    # Botões de download
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.download_button(
-            label="Download Dados RFM",
-            data=excel_bytes_rfm,
-            file_name="Dados_Clusters_RFM.xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            help="Baixe os dados completos da clusterização RFM."
-        )
-
-    with col2:
-        st.download_button(
-            label="Download Dados Jornada do Cliente",
-            data=excel_bytes_jornada,
-            file_name="Dados_Cluster_Jornada_do_Cliente (1).xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            help="Baixe os dados numéricos da clusterização por jornada."
-        )
-
 
 
 
