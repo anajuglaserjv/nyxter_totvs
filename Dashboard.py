@@ -369,9 +369,8 @@ elif escolha == "Clustering":
 
     # Explicação do Processo de Machine Learning
     st.header("Jornada do Cliente - Nosso Modelo de Machine Learning 🤖")
-    st.markdown("""
-        Para segmentar os clientes, utilizamos um modelo de **clusterização**, que agrupa automaticamente clientes com características semelhantes. Testamos duas abordagens principais:
-        
+    st.markdown("<h3>Para segmentar os clientes, utilizamos um modelo de clusterização, que agrupa automaticamente clientes com características semelhantes. Testamos duas abordagens principais:</h3>", unsafe_allow_html=True)
+    st.markdown("""        
         * **K-Means:** Um dos algoritmos mais populares para clusterização. No entanto, ele assume que os clusters têm um formato esférico e tamanhos similares. No nosso caso, as features dos clientes não seguiam esse padrão, o que resultou em uma separação artificial dos grupos.
         
         * **Gaussian Mixture Model (GMM):** O GMM, por sua vez, foi a nossa escolha ideal. Ele assume que os dados são compostos por distribuições gaussianas (em forma de sino) e consegue se adaptar melhor a clusters de diferentes tamanhos e formas. Isso nos permitiu criar agrupamentos mais precisos, refletindo a complexa diversidade da base de clientes da TOTVS.
@@ -459,6 +458,7 @@ elif escolha == "Clustering":
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             help="Baixe os dados numéricos da clusterização por jornada."
         )
+
 
 
 
