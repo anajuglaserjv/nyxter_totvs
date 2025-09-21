@@ -369,7 +369,7 @@ elif escolha == "Clustering":
 
     # Explicação do Processo de Machine Learning
     st.header("Jornada do Cliente - Nosso Modelo de Machine Learning 🤖")
-    st.markdown("<h3>Para segmentar os clientes, utilizamos um modelo de clusterização, que agrupa automaticamente clientes com características semelhantes. Testamos duas abordagens principais:</h3>", unsafe_allow_html=True)
+    st.markdown("<h4>Para segmentar os clientes, utilizamos um modelo de clusterização, que agrupa automaticamente clientes com características semelhantes. Testamos duas abordagens principais:</h4>", unsafe_allow_html=True)
     st.markdown("""        
         * **K-Means:** Um dos algoritmos mais populares para clusterização. No entanto, ele assume que os clusters têm um formato esférico e tamanhos similares. No nosso caso, as features dos clientes não seguiam esse padrão, o que resultou em uma separação artificial dos grupos.
         
@@ -458,6 +458,7 @@ elif escolha == "Clustering":
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             help="Baixe os dados numéricos da clusterização por jornada."
         )
+
 
 
 
