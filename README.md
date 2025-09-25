@@ -63,10 +63,5 @@ Os resultados confirmam a viabilidade de estratégias direcionadas para marketin
 
 ---
 
-## 📚 Fontes do Projeto  
-- Dados disponibilizados pela TOTVS  
-- Modelos de Clusterização: **GMM (Gaussian Mixture Model)** e **RFM**  
-- Ferramentas utilizadas: **Python (ETL, análise e modelagem)**, **Power BI**, **Streamlit**  
 
----
 
